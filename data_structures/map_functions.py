@@ -6,5 +6,6 @@ items = [
 
 
 prices = list(map(lambda item: item[1], items))
+[item[1] for item in items]
 
-print(prices)
+print(list(filter(lambda item: item[1] >= 10, items)))
