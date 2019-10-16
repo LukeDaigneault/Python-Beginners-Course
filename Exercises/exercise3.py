@@ -1,4 +1,3 @@
-from pprint import pprint
 sentence = "This is a common interview question"
 
 # my solution
@@ -11,15 +10,13 @@ for letter in sentence:
 
 
 for letter in count_dictionary:
-    if count_dictionary[letter] > highest_count:
+    if count_dictionary[letter] >= highest_count:
         highest_count = count_dictionary[letter]
 
 for letter in count_dictionary:
     if count_dictionary[letter] == highest_count:
         highest_letters.append(letter)
 
-print(count_dictionary)
-print(highest_count)
 print(highest_letters)
 
 # his solution
@@ -30,7 +27,6 @@ for char in sentence:
     else:
         char_frequency[char] = 1
 
-        pprint(char_frequency, width=1)
 
 char_frequency_sorted = sorted(
     char_frequency.items(),
